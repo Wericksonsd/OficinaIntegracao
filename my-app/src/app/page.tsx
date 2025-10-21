@@ -1,3 +1,4 @@
+import LoginForm from "@/components/loginForm";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,11 +12,9 @@ export default function Home() {
           height={100}
         />
       </div>
-      <div className="flex flex-col items-center justify-center w-full mt-12 flex-1 bg-zinc-700 rounded-lg">
-        <form action="submit">
-          
-        </form>
-      </div>
+
+      <LoginForm/>
+      
     </div>
   );
 }
