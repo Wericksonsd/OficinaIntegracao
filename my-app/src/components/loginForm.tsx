@@ -1,7 +1,7 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import { User } from "lucide-react";
+import { User, KeyRound } from "lucide-react";
 
 export default function LoginForm() {
 
@@ -45,7 +45,7 @@ return (
         </div>
 
         <div className="w-full flex item gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-[#211F45]">
-            <User />
+            <KeyRound />
             <input
                 name="password"
                 type="password"
