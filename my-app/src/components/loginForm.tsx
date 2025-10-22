@@ -27,7 +27,7 @@ export default function LoginForm() {
     }
 
     return (
-        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full mt-12 p-8 flex-1 bg-zinc-100 rounded-lg" >
+        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full mt-8 p-8 flex-1 bg-zinc-100 rounded-lg" >
 
             <div className="w-full flex">
                 <button
@@ -50,7 +50,7 @@ export default function LoginForm() {
                 {loginState === 0 ? "Acesse utilizando seu e-mail institucional.  Caso seja seu primeiro acesso, clique em SIGNIN crie sua conta." : "Crie sua conta utilizando seu e-mail institucional e seus dados. Você receberá no seu e-mail um link de confirmação, após confirmado, você poderá acessar o sistema."}
             </p>
 
-            <div className="w-full flex item gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)">
+            <div className="w-full flex item gap-4 p-4 py-2 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl) focus:text-(--mainCl)">
                 <User />
                 <input
                     name="email"
@@ -60,7 +60,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <div className={`w-full ${loginState === 1 ? "flex" : "hidden"} item-center gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)`}>
+            <div className={`w-full ${loginState === 1 ? "flex" : "hidden"} item-center gap-4 p-4 py-2 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)`}>
                 <IdCard />
                 <input
                     name="ra"
@@ -70,7 +70,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <div className="w-full flex item-center gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)">
+            <div className="w-full flex item-center gap-4 p-4 py-2 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)">
                 <KeyRound />
                 <input
                     name="password"
