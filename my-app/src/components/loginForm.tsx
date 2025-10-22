@@ -2,6 +2,7 @@
 
 import { signIn } from "next-auth/react";
 import React, { useState } from "react";
+import Link from "next/link";
 import { User, KeyRound, IdCard } from "lucide-react";
 
 export default function LoginForm() {
@@ -40,13 +41,13 @@ export default function LoginForm() {
                     type="button"
                     onClick={() => buttonColor(1)}
                     className={`w-1/2 text-3xl ${loginState === 1 ? "text-(--mainCl)" : "text-zinc-500"} font-bold text-right hover:cursor-pointer`}>
-                        <p>SINGIN</p>
+                        <p>SIGNIN</p>
                         <div className={`w-full h-1 ${loginState === 1 ? "bg-(--mainCl)" : "bg-zinc-500"} rounded-r-lg`}></div>
                 </button>
             </div>
 
             <p className="text-[#211f45] text-center flex-1">
-                {loginState === 0 ? "Acesse utilizando seu e-mail institucional.  Caso seja seu primeiro acesso, clique em SINGIN crie sua conta." : "Crie sua conta utilizando seu e-mail institucional e seus dados. Você receberá no seu e-mail um link de confirmação, após confirmado, você poderá acessar o sistema."}
+                {loginState === 0 ? "Acesse utilizando seu e-mail institucional.  Caso seja seu primeiro acesso, clique em SIGNIN crie sua conta." : "Crie sua conta utilizando seu e-mail institucional e seus dados. Você receberá no seu e-mail um link de confirmação, após confirmado, você poderá acessar o sistema."}
             </p>
 
             <div className="w-full flex item gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)">
@@ -69,7 +70,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <div className="w-full flex item-center gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)]">
+            <div className="w-full flex item-center gap-4 p-4 rounded-lg text-zinc-300 border-2 border-zinc-300 hover:bg-zinc-300 hover:text-(--mainCl)">
                 <KeyRound />
                 <input
                     name="password"
@@ -79,7 +80,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <button id="logar" className="w-full mt-6 bg-(--mainCl)  py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button>
+            <Link href="/setores" className="w-full"><button id="logar" className="w-full mt-6 bg-(--mainCl)  py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button></Link>
         </form>
     );
 }
