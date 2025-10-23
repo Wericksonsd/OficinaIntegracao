@@ -27,7 +27,7 @@ export default function LoginForm() {
     }
 
     return (
-        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full mt-8 p-8 flex-1 bg-zinc-100 rounded-lg" >
+        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full p-8 h-full bg-zinc-100 rounded-lg" >
 
             <div className="w-full flex">
                 <button
@@ -80,7 +80,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <Link href="/setores" className="w-full"><button id="logar" className="w-full mt-6 bg-(--mainCl)  py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button></Link>
+            <Link href="/main" className="w-full"><button id="logar" className="w-full mt-6 bg-(--mainCl)  py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button></Link>
         </form>
     );
 }
