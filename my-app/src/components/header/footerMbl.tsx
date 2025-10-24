@@ -1,4 +1,5 @@
 import {SquareUserRound, Menu, UsersRound, Settings} from "lucide-react"
+import Link from "next/link"
 
 export default function FooterMbl () {
     return(
@@ -23,16 +24,18 @@ export default function FooterMbl () {
                     size={36}
                     />
             </button>
-            <button
-                type="button"
-                id="btnPerfil"
-                title="btnPerfil"
-                className="w-full h-full flex items-center justify-center"
-                >
-                    <SquareUserRound 
-                    size={36}
-                    />
-            </button>
+            <Link href="/setores" className="w-full">
+                <button
+                    type="button"
+                    id="btnPerfil"
+                    title="btnPerfil"
+                    className="w-full h-full flex items-center justify-center"
+                    >
+                        <SquareUserRound 
+                        size={36}
+                        />
+                </button>
+            </Link>
             <button
                 type="button"
                 id="btnConfig"
