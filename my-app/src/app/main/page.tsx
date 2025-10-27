@@ -4,22 +4,29 @@ import Header from "@/components/header/header"
 import FooterMbl from "@/components/header/footerMbl"
 import { useState, useEffect } from "react"
 
-import { getAtividades } from "../bd/atvBD";
-import { Atividade } from "../bd/typesAtv";
+import { getAtividades } from "../../bd/atvBD";
+import { Atividade } from "../../bd/typesAtv";
 import CardAtv from "@/components/cards/cardAtv"
 
-import { getReuniao } from "../bd/reuniaoBD";
-import { Reuniao } from "../bd/typesReuniao";
+import { getReuniao } from "../../bd/reuniaoBD";
+import { Reuniao } from "../../bd/typesReuniao";
 import CardReuniao from "@/components/cards/cardReuniao";   
+
+import { getPerfils } from "@/bd/perfilBD";
+import { Perfil } from "@/bd/typesPerfil";
+import CardPerfil from "@/components/cards/cardPerfil";
 
 export default function Main() {
     const [atividades, setAtividades] = useState<Atividade[]>([])
     const [reunioes, setReunioes] = useState<Reuniao[]>([])
+    const [perfils, setPerfils] = useState<Perfil[]>([])
     
     useEffect(() => {
         async function fetchDados() {
             const dataAtv = await getAtividades()
             const dataRn = await getReuniao()
+            const dataPf = await getPerfils()
+            setPerfils(dataPf)
             setAtividades(dataAtv) 
             setReunioes(dataRn)  
         }
@@ -53,6 +60,18 @@ export default function Main() {
                                 reuniao={item} 
                             />
                         ))}
+                </div>
+                <div className="w-full">
+                    <h1 className="text-2xl font-bold">MEMBROS</h1>                        
+                    <div className="w-full h-0.75 bg-(--mainCl)"/>
+                    <div className="w-full flex flex-wrap items-center justify-between">
+                        {perfils.map((item) => (
+                            <CardPerfil
+                                key={item.id}
+                                perfil={item}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
             <FooterMbl/>

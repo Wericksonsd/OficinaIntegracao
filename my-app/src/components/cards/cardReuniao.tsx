@@ -2,7 +2,7 @@
 
 import {useState} from "react"
 import {ChevronRight} from "lucide-react"
-import { Reuniao } from "@/app/bd/typesReuniao"
+import { Reuniao } from "@/bd/typesReuniao"
 import Link from "next/link"
 
 interface CardItemProps {

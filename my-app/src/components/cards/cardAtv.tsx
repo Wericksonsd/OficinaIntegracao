@@ -2,7 +2,7 @@
 
 import {useState} from "react"
 import {Paperclip} from "lucide-react"
-import { Atividade } from "@/app/bd/typesAtv"
+import { Atividade } from "@/bd/typesAtv"
 
 interface CardItemProps {
     atividade: Atividade;
