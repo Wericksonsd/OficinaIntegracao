@@ -1,7 +1,7 @@
 const perfils =[
     {
         id : 1,
-        foto : "https://img.freepik.com/fotos-premium/primer-plano-gato-textil_1048944-26946806.jpg?semt=ais_hybrid&w=740&q=80",
+        foto : "/gato.jpg",
         nome : "Chico",
         email : "chico@alunos.utfpr.edu.br",
         telefone : "43 99999-0000",
@@ -17,7 +17,7 @@ const perfils =[
 
     {
         id : 2,
-        foto : "https://img.freepik.com/fotos-premium/primer-plano-gato-textil_1048944-26946806.jpg?semt=ais_hybrid&w=740&q=80",
+        foto : "/gato.jpg",
         nome : "Chico",
         email : "chico@alunos.utfpr.edu.br",
         telefone : "43 99999-0000",

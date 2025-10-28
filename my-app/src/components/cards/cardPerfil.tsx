@@ -2,6 +2,7 @@
 
 import { Perfil } from "@/bd/typesPerfil"
 import { useState } from "react"
+import Image from 'next/image'
 
 interface CardPerfilProps {
     perfil: Perfil;
@@ -21,8 +22,15 @@ export default function CardPerfil({ perfil }: CardPerfilProps) {
         onClick={() => handleTroggleActv()}
         className="w-[46%] mt-4">
             <div className={`w-full overflow-hidden flex flex-col border-(--mainCl) border-2 rounded-lg bg-(--mainCl) text-zinc-300`}>
-                <div className="w-full px-4 py-1 h-16 flex flex-col">
-                    
+                <div className="w-full px-4 py-1  flex flex-col">
+                    <div className="w-22 h-22 rounded-full overflow-hidden border-2 border-zinc-300">
+                        <Image
+                            src={perfil.foto}
+                            width={90}
+                            height={90}
+                            alt="Profile picture"
+                        />
+                    </div>
                     <p className="font-bold text-[1.2rem] flex-1 text-left">{perfil.nome}</p>
                     <div className="flex justify-between">
                         <p>{perfil.aniversario}</p>

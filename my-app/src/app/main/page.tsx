@@ -3,6 +3,7 @@
 import Header from "@/components/header/header"
 import FooterMbl from "@/components/header/footerMbl"
 import { useState, useEffect } from "react"
+import Image from 'next/image'
 
 import { getAtividades } from "../../bd/atvBD";
 import { Atividade } from "../../bd/typesAtv";
