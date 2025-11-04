@@ -21,8 +21,8 @@ export default function Home() {
     windowWidth < 768 ? "/horBranca.png" : "/redBranca.png";
 
   return (
-    <div className="bg-(--mainCl) flex h-dvh w-full flex-col items-center justify-center px-12 py-4 md:flex-row">
-      <div className="flex items-center justify-center w-full h-50 md:w-1/2">
+    <div className="bg-(--mainCl) flex h-dvh w-full flex-col items-center justify-center pt-4 md:flex-row">
+      <div className="flex items-center justify-center w-full h-50 md:w-1/2 px-12">
         <Image
           src={imgLogo}
           alt="Logo AP"

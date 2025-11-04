@@ -27,7 +27,7 @@ export default function LoginForm() {
     }
 
     return (
-        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full p-8 h-full bg-zinc-100 rounded-lg" >
+        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full p-8 h-full bg-zinc-100 rounded-t-lg" >
 
             <div className="w-full flex">
                 <button

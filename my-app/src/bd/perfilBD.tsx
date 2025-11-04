@@ -16,7 +16,7 @@ const perfils =[
     },
     {
         id : 3,
-        foto : "/gato.jpg",
+        foto : "/2.png",
         nome : "Marina",
         email : "marina@alunos.utfpr.edu.br",
         telefone : "43 98888-1111",
@@ -31,7 +31,7 @@ const perfils =[
     },
     {
         id : 4,
-        foto : "/gato.jpg",
+        foto : "/3.png",
         nome : "Lucas",
         email : "lucas@alunos.utfpr.edu.br",
         telefone : "43 97777-2222",
@@ -46,7 +46,7 @@ const perfils =[
     },
     {
         id : 5,
-        foto : "/gato.jpg",
+        foto : "/4.png",
         nome : "Bruna",
         email : "bruna@alunos.utfpr.edu.br",
         telefone : "43 96666-3333",
@@ -61,7 +61,7 @@ const perfils =[
     },
     {
         id : 6,
-        foto : "/gato.jpg",
+        foto : "/5.png",
         nome : "Rafael",
         email : "rafael@alunos.utfpr.edu.br",
         telefone : "43 95555-4444",
@@ -76,7 +76,7 @@ const perfils =[
     },
     {
         id : 7,
-        foto : "/gato.jpg",
+        foto : "/6.png",
         nome : "Letícia",
         email : "leticia@alunos.utfpr.edu.br",
         telefone : "43 94444-5555",
@@ -91,7 +91,7 @@ const perfils =[
     },
     {
         id : 8,
-        foto : "/gato.jpg",
+        foto : "/7.png",
         nome : "Gustavo",
         email : "gustavo@alunos.utfpr.edu.br",
         telefone : "43 93333-6666",
@@ -106,7 +106,7 @@ const perfils =[
     },
     {
         id : 9,
-        foto : "/gato.jpg",
+        foto : "/8.png",
         nome : "Fernanda",
         email : "fernanda@alunos.utfpr.edu.br",
         telefone : "43 92222-7777",
@@ -121,7 +121,7 @@ const perfils =[
     },
     {
         id : 10,
-        foto : "/gato.jpg",
+        foto : "/9.png",
         nome : "Eduardo",
         email : "eduardo@alunos.utfpr.edu.br",
         telefone : "43 91111-8888",
