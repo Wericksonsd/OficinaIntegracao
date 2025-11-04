@@ -38,7 +38,7 @@ export default function Main() {
     return (
         <div className="bg-zinc-300 w-full h-dvh md:max-h-dvh flex flex-col justify-end md:justify-start">
             <Header/>
-            <div className="bg-(--mainCl) flex items-center py-2 px-4 text-4xl font-bold sticky"> MATERIAL</div>           
+            <div className="gradient-bg flex items-center py-4 px-6 text-4xl font-bold sticky"> MATERIAL</div>           
             <div className="flex-1 px-6 py-10 flex flex-col gap-12 overflow-auto no-scrollbar text-(--mainCl) md:flex-row md:flex-wrap md:justify-between md:px-16 md:overflow">
                 <div className="w-full md:w-3/7">
                     <h1 className="text-2xl font-bold">SUAS ATIVIDADES</h1>
@@ -62,7 +62,7 @@ export default function Main() {
                             />
                         ))}
                 </div>
-                <div className="w-full h-80">
+                <div className="w-full">
                     <h1 className="text-2xl font-bold">MEMBROS</h1>                        
                     <div className="w-full h-0.75 bg-(--mainCl)"/>
                     <div className="w-full mt-4 flex flex-wrap gap-4 items-center justify-between md:flex-nowrap md:overflow-x no-scrollbar md:min-w-full">

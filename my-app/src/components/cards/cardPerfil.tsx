@@ -3,6 +3,7 @@
 import { Perfil } from "@/bd/typesPerfil"
 import { useState, useEffect } from "react"
 import Image from 'next/image'
+import ModalPerfil from "../modal/modalPerfil"
 
 interface CardPerfilProps {
     perfil: Perfil;
@@ -46,7 +47,8 @@ export default function CardPerfil({ perfil }: CardPerfilProps) {
             <div className="flex flex-col items-center justify-start text-center">
                 <p>{perfil.setor}</p>
                 <p className="font-light text-[0.8rem]">{perfil.curso}</p>
-            </div>            
+            </div>
+            <ModalPerfil/>           
         </div>
     )
 }
