@@ -34,12 +34,34 @@ export default function ModalPerfil({ modalOpen, handleModal, perfil}: ModalPerf
                 alt="Profile picture"
             />
         </div>
-        <p className="font-bold text-4xl">{perfil.nome}</p>
-        <p>{perfil.setor}</p>
-        <div className="w-4/5 h-0.75 bg-(--mainCl)"/>
-        <div className="">
-
+        <div className="w-full flex flex-col items-center justify-center">
+          <p className="font-bold text-4xl">{perfil.nome}</p>
+          <p>{perfil.setor}</p>
         </div>
+        {/*<div className="w-4/5 h-0.75 bg-(--mainCl)"/>*/}
+        <div className="flex-1 w-4/5">
+          <div className="text-(--mainCl) border-2 border-(mainCl) mt-4 rounded-md text-center relative">
+            <div className="w-32 font-bold rounded-md px-2 bg-(--mainCl) text-zinc-200 border-(--mainCl) text-left absolute top-0 left-0 -translate-y-1/2">CURSO</div>
+            <p className="text-2xl mt-3">{perfil.curso}</p>
+          </div>
+
+          <div className="text-(--mainCl) border-2 border-(mainCl) mt-6 rounded-md text-center relative">
+            <div className="w-32 font-bold rounded-md px-2 bg-(--mainCl) text-zinc-200 border-(--mainCl) text-left absolute top-0 left-0 -translate-y-1/2">CIDADE</div>
+            <p className="text-2xl mt-3">{perfil.cidade}</p>
+          </div>
+
+          <div className="text-(--mainCl) border-2 border-(mainCl) mt-6 rounded-md text-center relative">
+            <div className="w-32 font-bold rounded-md px-2 bg-(--mainCl) text-zinc-200 border-(--mainCl) text-left absolute top-0 left-0 -translate-y-1/2">HOBBIES</div>
+            <div className="flex flex-col mt-3">
+              {perfil.hobbie.map((item, index) => (
+                <span key={index} className="text-2xl">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>          
+        </div>
+        
       </div>
     </div>
   );
