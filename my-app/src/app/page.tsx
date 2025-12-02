@@ -2,8 +2,6 @@
 
 import { redirect } from "next/navigation";
 
-import Header from "@/components/header/header"
-import FooterMbl from "@/components/header/footerMbl"
 import { useState, useEffect } from "react"
 
 import { getAtividades } from "../bd/atvBD";
@@ -25,7 +23,7 @@ import { addReuniao } from "@/bd/reuniaoBD";
 
 export default function Main() {
     
-    /*redirect("/login")*/
+    /*redirect("/login")*/ /*VOLTA PRO LOGIN CASO NÃO SEJA REALIZADO*/
 
     const [atividades, setAtividades] = useState<Atividade[]>([])
     const [reunioes, setReunioes] = useState<Reuniao[]>([])
@@ -33,6 +31,7 @@ export default function Main() {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalRn, setModalRn] = useState(false);
 
+    /*PUXA DO BANCO DE DADOS INTERNO*/
     useEffect(() => {
         async function fetchDados() {
             const dataAtv = await getAtividades()
@@ -62,8 +61,7 @@ export default function Main() {
     };
 
     return (
-        <div className="bg-zinc-100 w-full h-dvh md:max-h-dvh flex flex-col justify-end md:justify-start text-zinc-200">
-            <Header/>
+        <div className="bg-zinc-100 w-full max-h-dvh md:max-h-dvh flex flex-col justify-end md:justify-start text-zinc-200">
             <div className="gradient-bg flex items-center py-4 px-6 text-4xl font-bold sticky"> MATERIAL</div>           
             <div className="flex-1 px-6 py-10 flex flex-col gap-12 overflow-auto no-scrollbar text-(--mainCl) md:flex-row md:flex-wrap md:justify-between md:px-16 md:overflow">
                 <div className="w-full md:w-3/7">
@@ -127,7 +125,6 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <FooterMbl/>
         </div>
     )
 }

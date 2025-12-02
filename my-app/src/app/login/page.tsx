@@ -31,6 +31,7 @@ return (
     </div>
 
     <div className="mt-8 flex-1 w-full md:px-48 md:h-3/5">
+        {/*ACESSE O FORMS PARA VER O LOGIN E CRIAÇÃO DE CONTA*/}
         <LoginForm />
     </div>
     </div>
