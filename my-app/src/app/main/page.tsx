@@ -3,6 +3,7 @@
 import Header from "@/components/header/header"
 import FooterMbl from "@/components/header/footerMbl"
 import { useState, useEffect } from "react"
+import { useSession } from 'next-auth/react';
 import Image from 'next/image'
 
 import { getAtividades } from "../../bd/atvBD";
@@ -18,10 +19,18 @@ import { Perfil } from "@/bd/typesPerfil";
 import CardPerfil from "@/components/cards/cardPerfil";
 
 export default function Main() {
+    
     const [atividades, setAtividades] = useState<Atividade[]>([])
     const [reunioes, setReunioes] = useState<Reuniao[]>([])
     const [perfils, setPerfils] = useState<Perfil[]>([])
+    const [loggedUser, setLoggedUser] = useState(1);
     
+    const userPerms = "membro"
+
+    const newAtv = () => {
+        
+    }
+
     useEffect(() => {
         async function fetchDados() {
             const dataAtv = await getAtividades()
@@ -36,7 +45,7 @@ export default function Main() {
     }, [])
 
     return (
-        <div className="bg-zinc-300 w-full h-dvh md:max-h-dvh flex flex-col justify-end md:justify-start">
+        <div className="bg-zinc-100 w-full h-dvh md:max-h-dvh flex flex-col justify-end md:justify-start">
             <Header/>
             <div className="gradient-bg flex items-center py-4 px-6 text-4xl font-bold sticky"> MATERIAL</div>           
             <div className="flex-1 px-6 py-10 flex flex-col gap-12 overflow-auto no-scrollbar text-(--mainCl) md:flex-row md:flex-wrap md:justify-between md:px-16 md:overflow">

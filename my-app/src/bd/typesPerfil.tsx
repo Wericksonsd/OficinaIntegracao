@@ -1,6 +1,7 @@
 export interface Perfil{
     "id" : number,
     "foto" : string,
+    "cargo" : string,
     "nome" : string,
     "email" : string,
     "telefone" : string,

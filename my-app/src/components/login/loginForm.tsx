@@ -22,12 +22,8 @@ export default function LoginForm() {
 
     const [ loginState, setLoginState] = useState(0);
 
-    const buttonColor = (x: number) =>{
-        setLoginState(x);
-    }
-
     return (
-        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full p-8 h-full bg-zinc-100 rounded-t-lg" >
+        <form onSubmit={login} className="flex flex-col items-center justify-start gap-4 w-full p-8 h-full bg-zinc-100 rounded-t-lg md:rounded-lg" >
 
             <div className="w-full flex">
                 <button
@@ -80,7 +76,7 @@ export default function LoginForm() {
                 />
             </div>
 
-            <Link href="/main" className="w-full"><button id="logar" className="w-full mt-6 bg-(--mainCl)  py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button></Link>
+            <Link href="/main" className="w-full"><button id="logar" className="w-full mt-6 bg-(--mainCl) text-zinc-200 py-4 rounded-lg text-2xl font-bold" type="submit"> LOGAR </button></Link>
         </form>
     );
 }
