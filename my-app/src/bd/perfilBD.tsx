@@ -2,7 +2,7 @@ const perfils =[
     {
         id : 1,
         foto : "/gato.jpg",
-        cargo: "membro",
+        cargo: "Membro",
         nome : "Chico",
         email : "chico@alunos.utfpr.edu.br",
         telefone : "43 99999-0000",
@@ -18,7 +18,7 @@ const perfils =[
     {
         id : 3,
         foto : "/2.png",
-        cargo: "membro",
+        cargo: "Membro",
         nome : "Marina",
         email : "marina@alunos.utfpr.edu.br",
         telefone : "43 98888-1111",

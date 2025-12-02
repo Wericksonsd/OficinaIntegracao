@@ -1,7 +1,6 @@
 'use client'
 
 import { Perfil } from "@/bd/typesPerfil"
-import { useState, useEffect } from "react"
 import Image from 'next/image'
 
 interface ModalPerfilProps {
@@ -10,15 +9,11 @@ interface ModalPerfilProps {
   handleModal: () => void;
 }
 
-interface CardPerfilProps {
-  perfil: Perfil;
-}
-
 export default function ModalPerfil({ modalOpen, handleModal, perfil}: ModalPerfilProps){
 
   return (
     <div className={`bg-[#222222cc] z-1 inset-0 p-12 py-24 fixed ${modalOpen ? "flex" : "hidden"} items-center justify-center`}>
-      <div className="w-full h-full py-12 bg-zinc-200 rounded-lg flex flex-col gap-4 items-center justify-start relative">
+      <div className="w-full md:w-1/2 h-full py-12 bg-zinc-200 rounded-lg flex flex-col gap-4 items-center justify-start relative">
         <button
           type="button"
           id="btnCloseModalPfl"
@@ -36,6 +31,7 @@ export default function ModalPerfil({ modalOpen, handleModal, perfil}: ModalPerf
         </div>
         <div className="w-full flex flex-col items-center justify-center">
           <p className="font-bold text-4xl">{perfil.nome}</p>
+          <p>{perfil.cargo}</p>
           <p>{perfil.setor}</p>
         </div>
         {/*<div className="w-4/5 h-0.75 bg-(--mainCl)"/>*/}
